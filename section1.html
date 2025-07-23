@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAITRONIC Products </title>
+  <link rel="stylesheet" href="section1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="icon" href="/images/spark.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="/images/cattt.png" alt="Caitronics Logo" /></a>
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="store.html">Products</a>
+          <a href="login.html" id="navLinkLogin">login</a>
+          <a href="signup.html" id="navLinkSignup">Registration</a>
+          <a href="cart.html">cart</a>
+        </nav>
+        <button id="mode-toggle" class="mode-btn">Light Mode</button>
+      </header>
+
+ <div class="page-title">
+        <h1>Resistores, Wires & Breadboard</h1>
+      </div>
+    <div class="container">
+    <div class="product">
+      <div class="imges" data-delay="4000">
+        <img src="/images/wires.1.jpeg" alt="image not available" class="active" />
+        <img src="/images/wires.2.jpeg" alt="image not available" />
+      </div>
+      <div class="price">
+        <p class="Price">Price: " 2 " L.E</p>
+        <p class="description"> wires</p>
+      </div>
+      <div class="quantity-controls">
+        <button onclick="changeQuantity(this, -15)">-</button>
+        <span data-min="15">15</span>
+        <button onclick="changeQuantity(this, 15)">+</button>
+      </div>
+      <div class="add">
+        <button class="add-to-cart-btn" data-id="wires" data-name="wires" data-price="2 L.E">Add to Cart</button>
+        <div class="message"></div>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="imges" data-delay="4000">
+        <img src="/images/breadbod.1.jpeg" alt="image not available" class="active" />
+        <img src="/images/breadbord.3.jpeg" alt="image not available" />
+        <img src="/images/breadbord.4.jpeg" alt="image not available" />
+      </div> 
+      <div class="price">
+        <p class="Price">Price: " 60 " L.E</p>
+        <p class="description">Breadboard with 200 points</p>
+      </div>
+      <div class="quantity-controls">
+        <button onclick="changeQuantity(this, -1)">-</button>
+        <span data-min="1">1</span>
+        <button onclick="changeQuantity(this, 1)">+</button>
+      </div>
+      <div class="add">
+        <button class="add-to-cart-btn" data-id="Breadboard" data-name="Breadboard" data-price="60 L.E">Add to Cart</button>
+        <div class="message"></div>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="/images/res.1k.jpeg" alt="image not available" />
+      <div class="price">
+        <p class="Price">Price: " 5 " L.E</p>
+        <p class="description"> Resistor 1 kilo OHM</p>
+      </div>
+      <div class="quantity-controls">
+        <button onclick="changeQuantity(this, -5)">-</button>
+        <span data-min="5">5</span>
+        <button onclick="changeQuantity(this, 5)">+</button>
+      </div>
+      <div class="add">
+        <button class="add-to-cart-btn" data-id="res1k" data-name="Resistor 1 kilo ohm" data-price="5 L.E">Add to Cart</button>
+        <div class="message"></div>
+      </div>  
+    </div>
+
+    <div class="product">
+      <img src="/images/res.100k.jpeg" alt="image not available" />
+      <div class="price">
+        <p class="Price">Price: " 3 " L.E</p>
+        <p class="description"> Resistor 100 kilo ohm</p>
+      </div>
+      <div class="quantity-controls">
+        <button onclick="changeQuantity(this, -10)">-</button>
+        <span data-min="10">10</span>
+        <button onclick="changeQuantity(this, 10)">+</button>
+      </div>
+      <div class="add">
+        <button class="add-to-cart-btn" data-id="res100k" data-name="Resistor 100 kilo ohm" data-price="3 L.E">Add to Cart</button>
+        <div class="message"></div>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="/images/res220.jpeg" alt="image not available" />
+      <div class="price">
+        <p class="Price">Price: " 5 " L.E</p>
+        <p class="description"> Resistor 220 OHM / 0.5 watt</p>
+      </div>
+      <div class="quantity-controls">
+        <button onclick="changeQuantity(this, -10)">-</button>
+        <span data-min="10">10</span>
+        <button onclick="changeQuantity(this, 10)">+</button>
+      </div>
+      <div class="add">
+        <button class="add-to-cart-btn" data-id="res220/0.5" data-name="Resistor 220 ohm / 05 watt" data-price="5 L.E">Add to Cart</button>
+        <div class="message"></div>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="/images/res.220.jpeg" alt="image not available" />
+      <div class="price">
+        <p class="Price">Price: " 3 "L.E</p>
+        <p class="description"> Resistor 220 OHM</p>
+      </div>
+      <div class="quantity-controls">
+        <button onclick="changeQuantity(this, -10)">-</button>
+        <span data-min="10">10</span>
+        <button onclick="changeQuantity(this, 10)">+</button>
+      </div>  
+      <div class="add">
+        <button class="add-to-cart-btn" data-id="res220" data-name="Resistor 220 ohm" data-price="3 L.E">Add to Cart</button>
+        <div class="message"></div>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="/images/res2.2k.jpeg" alt="image not available" />
+      <div class="price">
+        <p class="Price">Price: " 5 " L.E</p>
+        <p class="description">Resistor 2.2 kilo OHM</p>
+      </div>
+      <div class="quantity-controls">
+        <button onclick="changeQuantity(this, -5)">-</button>
+        <span data-min="5">5</span>
+        <button onclick="changeQuantity(this, 5)">+</button>
+      </div>
+      <div class="add">
+        <button class="add-to-cart-btn" data-id="res2.2" data-name="Resistor 2.2 kilo ohm" data-price="5 L.E">Add to Cart</button>
+        <div class="message"></div>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="/images/res10k.jpeg" alt="image not available" />
+      <div class="price">
+        <p class="Price">Price: " 10 " L.E</p>
+        <p class="description"> Resistor 10 kilo OHM</p>
+      </div>
+      <div class="quantity-controls">
+        <button onclick="changeQuantity(this, -5)">-</button>
+        <span data-min="5">5</span>
+        <button onclick="changeQuantity(this, 5)">+</button> 
+      </div>
+      <div class="add">
+        <button class="add-to-cart-btn" data-id="res10k" data-name="Resistor10 kilo ohm" data-price="10 L.E">Add to Cart</button>
+        <div class="message"></div>
+      </div>
+    </div>
+    <a href="cart.html" class="cart-icon" title="View Cart">🛒</a>
+  </div>
+    <footer>
+      <div class="footer_top">
+        <a href="about_us.html" class="navlink">About us</a>
+        <a href="contactus.html" class="navlink">Contact us</a>
+      </div>
+      <p>
+        &copy; 2025 Caitronics. All rights reserved.
+      </p>
+    </footer>
+  
+  <script src="section1.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
