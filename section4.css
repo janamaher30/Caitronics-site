@@ -18,7 +18,7 @@ header {
 body {
   font-family: 'Times New Roman';
   background-color: #021323;
-  background-image: url("/images/background2.jpg");  
+  background-image: url("images/background2.jpg");  
 }
 .main-title {
   text-align: center;
@@ -122,7 +122,7 @@ nav a:hover {
   color: #e4da2b; 
 }
 body[data-theme="light"] {
-      background-image: url("/images/background\ light.png"); 
+      background-image: url("images/background\ light.png"); 
   color: #000;
 }
 body[data-theme="light"] header {

@@ -31,7 +31,7 @@ header {
     color: #e4da2b; 
   }
   body {
-    background-image: url("/images/background2.jpg");
+    background-image: url("images/background2.jpg");
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -205,7 +205,7 @@ header {
   }
 
 body[data-theme="light"] {
-  background-image: url("/images/background\ light.png");
+  background-image: url("images/background\ light.png");
   background-color: #f5f5f5;
 }
 body[data-theme="light"] .cart-page,

@@ -31,10 +31,10 @@
     color: #e4da2b; 
   }
   body{
-  background-image: url("/images/background2.jpg");  
+  background-image: url("images/background2.jpg");  
   }
   body[data-theme="light"] {
-      background-image: url("/images/background\ light.png"); 
+      background-image: url("images/background\ light.png"); 
     color: #000;
   }
   body[data-theme="light"] header {

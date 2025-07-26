@@ -7,7 +7,7 @@ body {
     font-family: 'Times New Roman', Times, serif, sans-serif;
     margin: 0;
     padding: 0;
-  background-image: url("/images/background2.jpg");  
+  background-image: url("/mages/background2.jpg");  
   }
   .container {
     display: flex;
@@ -133,7 +133,7 @@ body {
         color: #e4da2b; 
       }
       body[data-theme="light"] {
-      background-image: url("/images/background\ light.png"); 
+      background-image: url("images/background\ light.png"); 
         color: #000;
       }
       body[data-theme="light"] header {

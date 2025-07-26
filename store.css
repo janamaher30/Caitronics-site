@@ -64,7 +64,7 @@ main {
 }
 body{
   font-family: 'Times New Roman', Times, serif, sans-serif;
-  background-image: url("/images/background2.jpg");  
+  background-image: url("images/background2.jpg");  
   background-size:cover;
   margin: auto;
 }
@@ -79,7 +79,7 @@ a {
   margin: auto;
 }
 body[data-theme="light"] {
-      background-image: url("/images/background\ light.png"); 
+      background-image: url("images/background\ light.png"); 
   color: #000;
 }
 body[data-theme="light"]  header {

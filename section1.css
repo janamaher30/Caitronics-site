@@ -10,7 +10,7 @@ body {
   justify-content: center;
   flex-direction:column;
   background-attachment: fixed;
-  background-image: url("/images/background2.jpg");  
+  background-image: url("images/background2.jpg");  
   height: 100%;
 }    
 .page-title h1 {
@@ -177,7 +177,7 @@ body {
       color:#e4da2b; 
   }
   body[data-theme="light"] {
-      background-image: url("/images/background\ light.png"); 
+      background-image: url("images/background\ light.png"); 
       background-size:cover ;
       }
   body[data-theme="light"] header {

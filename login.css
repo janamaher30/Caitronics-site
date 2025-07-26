@@ -1,5 +1,5 @@
 :root{
-  --background-image: url("/images/background2.jpg");
+  --background-image: url("images/background2.jpg");
   --slider-bg-color: #2f4156;
   --slider-circle-color: black;
   --text-color: black;
@@ -8,7 +8,7 @@
   --background-color:#021023;
 }
 [data-theme="light"]{
-  --background-image: url("/images/background\ light.png");
+  --background-image: url("images/background\ light.png");
   --slider-bg-color: #c9b8ae;
   --slider-circle-color: #ffffff;
   --text-color: black;
