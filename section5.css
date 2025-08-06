@@ -1,324 +1,251 @@
-*{
+/* ------------------ Reset ------------------ */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
- header { 
- margin: auto;
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding: 10px 30px;
- background-color: #021023 ;
- font-family: sans-serif;
-  } 
-   .logo img {
-    height: 50px;
-    width: auto;
-    margin: 0;
-  }
-  nav {
-    display: flex;
-    gap: 30px;  
-  }
-  nav a {
-    color: #736f7e; 
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    margin: auto;
-   }
-  nav a:hover {
-    color: #e4da2b; 
-  }
-  body{
-  background-image: url("images/background2.jpg");  
-  }
-  body[data-theme="light"] {
-      background-image: url("images/background\ light.png"); 
-    color: #000;
-  }
-  body[data-theme="light"] header {
-    background-color: #f1f1f1;
-  }
-  .mode-btn {
-    padding: 8px 16px;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #021023, #0c1b61);
-    border: none;
-    color: #fff;
-    font-weight: bold;
-  } 
-  body[data-theme="light"] .mode-btn {
-    color: #fff;
-    border-color: #333;
-  }
-  .card1{
-    background-color:white;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height:400px;
-    width: 300px;
-    margin-top:50px;
-    margin-left:20px ;
-    border-radius:20px ;
-   }
-    .card2{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .card3{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .card4{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .container1{
-      display: flex;
-      gap: 15px;
-    }
-    .card5{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .card6{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .card7{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .card8{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-       .container2{
-      display: flex;
-      gap: 15px;
-    }
-    .card9{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .card10{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .card11{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .card12{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .card13{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .card14{
-      background-color:white;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height:400px;
-      width: 300px;
-      margin-top:50px;
-      margin-left:20px ;
-      border-radius:20px ;
-    }
-    .container3{
-      display: flex;
-      gap:15px ;
-    }
-    .container4{
-      display: flex;
-      gap: 15px;
-    }
-  .product{
+
+/* ------------------ Body & Theme ------------------ */
+body {
+  background-image: url("images/background2.jpg");
+  font-family: sans-serif;
+}
+
+body[data-theme="light"] {
+  background-image: url("images/background light.png");
+  color: #000;
+}
+
+body[data-theme="light"] header,
+body[data-theme="light"] footer {
+  background-color: #f1f1f1;
+}
+
+/* لما يبقى في اللايت مود تتغير الخلفية */
+body[data-theme="light"] nav.active {
+  background-color: #f1f1f1; /* فاتح */
+}
+
+/* ------------------ Header ------------------ */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #021023;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #736f7e;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e4da2b;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+/* الزرار في الوضع العادي (دارك مود) */
+.mode-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #021023, #0c1b61); /* خلفية غامقة */
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* الزرار في الوضع الفاتح (Light Mode) */
+body[data-theme="light"] .mode-btn {
+  background: linear-gradient(45deg, #ddd, #fff); /* خلفية فاتحة */
+  color: #000; /* كتابة غامقة */
+  border: 1px solid #999;
+}
+
+
+/* ------------------ Main Title ------------------ */
+.main-title {
+  margin: 20px 0 50px;
+  text-align: center;
+  color: black;
+}
+
+/* ------------------ Cards & Containers ------------------ */
+.container1, .container2, .container3, .container4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+[class^="card"] {
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 400px;
+  width: 300px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.product {
   width: 150px;
   height: 150px;
-  margin-top: 50px;
-  }
-  h2{
-    margin:5px;
-  }
-  .price{
+  margin-top: 20px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+.price {
   font-family: Arial, Helvetica, sans-serif;
-    margin:20px;
-    }
-.plus, .minus {
-  margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #4CAF50	;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  margin: 20px 0;
 }
-.Add-To-Cart button {
-  margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #4CAF50	;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+/* ------------------ Buttons ------------------ */
+.plus, .minus, .Add-To-Cart button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
 }
-.plus:hover, .minus:hover{
-  background-color: #000	;
-}
+
+.plus:hover, .minus:hover,
 .Add-To-Cart button:hover {
-  background-color: #000	;
+  background-color: #000;
 }
-  .main-title{
-    margin-top:20px;
-    margin-bottom:50px ;
-    text-align: center;
-    color:black;
-   }
-   .cart-icon {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    font-size: 36px;
-    text-decoration: none;
-   } 
-   .message {
-    display: none; 
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    font-size: 14px;
-    transition: opacity 0.5s ease; 
+
+/* ------------------ Cart Icon ------------------ */
+.cart-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 36px;
+  text-decoration: none;
+  z-index: 999;
 }
+
+/* ------------------ Message ------------------ */
+.message {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  transition: opacity 0.5s ease;
+}
+
 .message.show {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
-footer{
-  position: sticky;
-  left: 0;
-  top: 100%;
-  width: 100%;
+
+/* ------------------ Footer ------------------ */
+footer {
   background-color: #021023;
-  font-family: sans-serif;
+  width: 100%;
   margin-top: auto;
+  text-align: center;
 }
-.footer_top{
+
+.footer_top {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding: 10px 0;
 }
+
 footer a {
   color: #736f7e;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
 }
+
 footer a:hover {
   color: #e4da2b;
 }
-footer p{
+
+footer p {
   color: #736f7e;
   font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding-bottom: 10px;
 }
-body[data-theme="light"] footer {
-  background-color: #f1f1f1;
+
+/* ------------------ Media Queries ------------------ */
+@media (max-width: 768px) {
+    nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #021023;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 20px;
+    border-top: 1px solid #444;
+  }
+
+  header {
+    align-items: flex-start;
+  }
+   .mode-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .container1, .container2, .container3, .container4 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  [class^="card"] {
+    width: 90%;
+  }
 }

@@ -6,51 +6,110 @@
 body {
   font-family: 'Times New Roman', Times, serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction:column;
   background-attachment: fixed;
-  background-image: url("images/background2.jpg");  
+  background-image: url("images/background2.jpg");
   height: 100%;
-}    
+  background-size: cover;
+  transition: background-image 0.3s ease;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #021023;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 1000;
+}
+/* Logo */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+/* Navigation */
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #736f7e;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e4da2b;
+}
+.mode-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #021023, #0c1b61); /* خلفية غامقة */
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+/* Page Title */
 .page-title h1 {
-  display:flex;
   text-align: center;
   padding: 20px;
-  color:white ;
+  color: white;
   margin-top: 80px;
 }
-.container{
+/* Container */
+.container {
   width: 100%;
   max-width: 700px;
   padding: 60px;
-  height: auto;
   margin-top: -50px;
 }
+
+/* Product Card */
 .product {
   background: #fff;
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 20px;
-  display: flex;
-  flex-direction:column;
-  text-align: center; 
+  text-align: center;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
-  height: auto;
 }
-.product img { 
-  width: 100%; 
+
+/* Product Images */
+.product img {
+  width: 100%;
   max-width: 600px;
-  height: auto; 
+  height: auto;
   border-radius: 10px;
 }
+
 .imges {
   position: relative;
   width: 100%;
   max-width: 600px;
   height: 175px;
-  margin:auto;
+  margin: auto;
 }
+
 .imges img {
   position: absolute;
   top: 0;
@@ -62,24 +121,31 @@ body {
   object-fit: contain;
   border-radius: 10px;
 }
+
 .imges img.active {
   opacity: 1;
 }
-.price{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+
+/* Price & Description */
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .price p.Price {
   font-weight: bold;
   font-size: 22px;
   color: #333;
 }
+
 .price p.description {
   font-size: 22px;
   color: #555;
   margin-top: 5px;
 }
+
+/* Quantity Controls */
 .quantity-controls {
   margin-top: 20px;
   display: flex;
@@ -87,45 +153,53 @@ body {
   align-items: center;
   gap: 10px;
 }
+
 .quantity-controls button {
   font-size: 18px;
   width: 40px;
   height: 40px;
   border: none;
-  background-color:rgb(9, 47, 131) ;
+  background-color: rgb(9, 47, 131);
   color: white;
   border-radius: 8px;
+  cursor: pointer;
 }
+
 .quantity-controls button:hover {
-  background-color:rgb(20, 108, 223) ;
-  transform: scale (1.1);
+  background-color: rgb(20, 108, 223);
+  transform: scale(1.1);
 }
+
 .quantity-controls span {
   font-size: 20px;
   font-weight: bold;
   width: 40px;
-  display:flex;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
+
+/* Add to Cart Button */
 .add-to-cart-btn {
-  background-color:rgb(9, 47, 131);
+  background-color: rgb(9, 47, 131);
   color: white;
-  display:flex;
-  align-items: center;
   border-radius: 10px;
   padding: 10px;
-  cursor: pointer;
   font-size: 1em;
-  margin: 10px auto 0 auto ;
-  box-sizing: border-box; 
+  margin: 10px auto 0 auto;
   width: 100%;
-  max-width:100px;
+  max-width: 100px;
+  display: flex;
   justify-content: center;
-  }
+  cursor: pointer;
+}
+
 .add-to-cart-btn:hover {
   background-color: rgb(20, 108, 223);
   transform: scale(1.1);
-  }
+}
+
+/* Cart Icon */
 .cart-icon {
   position: fixed;
   bottom: 30px;
@@ -134,113 +208,113 @@ body {
   text-decoration: none;
   z-index: 1000;
 }
-.message{
-  display: none; 
-  position: fixed; 
-  top: 100px; 
+
+/* Message Notification */
+.message {
+  display: none;
+  position: fixed;
+  top: 100px;
   left: 40px;
-  background: rgb(20, 108, 223); 
-  color: white; 
-  padding:20px ;
+  background: rgb(20, 108, 223);
+  color: white;
+  padding: 20px;
   border-radius: 10px;
+  z-index: 999;
 }
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background-color: #021023;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    top: 0;
-    left: 0;
+
+/* Footer */
+footer {
+  position: sticky;
+  top: 100%;
+  width: 100%;
+  background-color: #021023;
+  font-family: sans-serif;
+  margin-top: auto;
+  z-index: 100;
+  padding-top: 10px;
+}
+
+.footer_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 6px 0;
+}
+
+footer a {
+  color: #736f7e;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #e4da2b;
+}
+
+footer p {
+  color: #736f7e;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* Light Theme */
+body[data-theme="light"] {
+  background-image: url("images/background light.png");
+}
+body[data-theme="light"] header {
+  background-color: #f1f1f1;
+}
+body[data-theme="light"] h1 {
+  color: black;
+}
+body[data-theme="light"] footer {
+  background-color: #f1f1f1;
+}
+
+body[data-theme="light"] nav.active {
+  background-color: #f1f1f1; 
+}
+
+body[data-theme="light"] .mode-btn {
+  background: linear-gradient(45deg, #ddd, #fff); 
+  color: #000;
+  border: 1px solid #999;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+    display: block;
+  }
+
+    nav {
+    display: none;
+    flex-direction: column;
     width: 100%;
-    position:fixed;
-    z-index: 1000;
-    height: 60px;
-}
-  .logo img {
-          height: 50px;
-          width: auto;
-          margin: 0;
-      }
-  nav {
-      display: flex;
-      gap: 30px;
-      }
+    background-color: #021023;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
   nav a {
-      color: #736f7e; 
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: bold;
-      }
-  nav a:hover {
-      color:#e4da2b; 
+    padding: 10px 20px;
+    border-top: 1px solid #444;
   }
-  body[data-theme="light"] {
-      background-image: url("images/background\ light.png"); 
-      background-size:cover ;
-      }
-  body[data-theme="light"] header {
-      background-color: #f1f1f1;
-      }
+
+  header {
+    align-items: flex-start;
+  }
+
+  
    .mode-btn {
-    padding: 8px 16px;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #021023, #0c1b61);
-    border: none;
-    color: #fff;
-    font-weight: bold;
-  } 
-  body[data-theme="light"] .mode-btn {
-    color: #fff;
-    border-color: #333;
+    width: 100%;
+    text-align: center;
   }
-  body[data-theme="light"] h1{
-      color: black;
-      }    
-  .cart-icon {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      font-size: 36px;
-      text-decoration: none;
-      }
-      footer{
-        position: sticky;
-        left: 0;
-        top: 100%;
-        width: 100%;
-        background-color: #021023;
-        font-family: sans-serif;
-        margin-top: auto;
-        z-index: 100;
-      }  
-      .footer_top{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-        padding-top: 6px;
-        padding-bottom: 6px;
-      }
-      
-      footer a {
-        color: #736f7e;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      footer a:hover {
-        color: #e4da2b;
-      }
-      footer p{
-        color: #736f7e;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 10px;
-      }
-      body[data-theme="light"] footer {
-        background-color: #f1f1f1;
-      }
+}

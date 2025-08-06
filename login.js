@@ -107,3 +107,7 @@ function handleLogout(e) {
         window.location.href = 'index.html';
     }
 }
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("active");
+  }

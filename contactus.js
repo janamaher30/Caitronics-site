@@ -7,6 +7,9 @@ document.querySelectorAll('.section-link').forEach(link => {
       }, 500);
     });
   });
- 
+ function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("active");
+  }
 
    

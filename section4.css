@@ -3,23 +3,101 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: 'Times New Roman';
+  background-color: #021323;
+  background-image: url("images/background2.jpg");
+}
+
+/* Light Mode */
+body[data-theme="light"] {
+  background-image: url("images/background\ light.png");
+  color: #000;
+}
+body[data-theme="light"] header,
+body[data-theme="light"] footer {
+  background-color: #f1f1f1;
+}
+body[data-theme="light"] .mode-btn {
+  color: #fff;
+}
+
+/* Header */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
+  flex-wrap: wrap;
+  padding: 20px;
   background-color: #021023;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
 }
-body {
-  font-family: 'Times New Roman';
-  background-color: #021323;
-  background-image: url("images/background2.jpg");  
+
+/* Logo */
+.logo img {
+  height: 50px;
+  width: auto;
 }
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #736f7e;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e4da2b;
+}
+
+/* Toggle Button */
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+body[data-theme="light"] .menu-icon span {
+  background-color: #333;
+}
+/* الزرار في الوضع العادي (دارك مود) */
+.mode-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #021023, #0c1b61); /* خلفية غامقة */
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* لما يبقى في اللايت مود تتغير الخلفية */
+body[data-theme="light"] nav.active {
+  background-color: #f1f1f1; /* فاتح */
+}
+
+/* الزرار في الوضع الفاتح (Light Mode) */
+body[data-theme="light"] .mode-btn {
+  background: linear-gradient(45deg, #ddd, #fff); /* خلفية فاتحة */
+  color: #000; /* كتابة غامقة */
+  border: 1px solid #999;
+}
+
+
+/* Main Title */
 .main-title {
   text-align: center;
   font-size: 40px;
@@ -27,6 +105,8 @@ body {
   margin-top: 30px;
   margin-bottom: 20px;
 }
+
+/* Products Container */
 .container {
   width: 100%;
   display: flex;
@@ -104,43 +184,9 @@ body {
   font-size: 36px;
   text-decoration: none;
 }
-.logo img {
-  height: 50px;
-  width: auto;
-}
-nav {
-  display: flex;
-  gap: 30px;
-}
-nav a {
-  color: #736f7e; 
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-nav a:hover {
-  color: #e4da2b; 
-}
-body[data-theme="light"] {
-      background-image: url("images/background\ light.png"); 
-  color: #000;
-}
-body[data-theme="light"] header {
-  background-color: #f1f1f1;
-}
-.mode-btn {
-  padding: 8px 16px;
-  border-radius: 8px;
-  background: linear-gradient(45deg, #021023, #0c1b61);
-  border: none;
-  color: #fff;
-  font-weight: bold;
-} 
-body[data-theme="light"] .mode-btn {
-  color: #fff;
-  border-color: #333;
-}
-footer{
+
+/* Footer */
+footer {
   position: sticky;
   left: 0;
   top: 100%;
@@ -149,7 +195,7 @@ footer{
   font-family: sans-serif;
   margin-top: auto;
 }
-.footer_top{
+.footer_top {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,7 +212,7 @@ footer a {
 footer a:hover {
   color: #e4da2b;
 }
-footer p{
+footer p {
   color: #736f7e;
   font-size: 18px;
   display: flex;
@@ -174,6 +220,45 @@ footer p{
   justify-content: center;
   padding-bottom: 10px;
 }
-body[data-theme="light"] footer {
-  background-color: #f1f1f1;
+
+/* ------------------- Responsive Design ------------------- */
+
+@media (max-width: 768px) {
+   nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #021023;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 20px;
+    border-top: 1px solid #444;
+  }
+
+  header {
+    align-items: flex-start;
+  }
+
+
+   .mode-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .product {
+    width: 80%;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-title {
+    font-size: 30px;
+  }
 }

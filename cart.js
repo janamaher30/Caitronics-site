@@ -147,3 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
         checkoutForm.reset();
     });
   });
+  function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("active");
+  }

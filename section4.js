@@ -87,3 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartCount();
     window.addEventListener('storage', updateCartCount);
 });
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("active");
+  }
